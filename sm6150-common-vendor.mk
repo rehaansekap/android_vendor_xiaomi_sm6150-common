@@ -73,7 +73,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm6150-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
     vendor/xiaomi/sm6150-common/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/xiaomi/sm6150-common/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
-    vendor/xiaomi/sm6150-common/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/xiaomi/sm6150-common/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/xiaomi/sm6150-common/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/xiaomi/sm6150-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
@@ -213,7 +212,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0-impl \
     vendor.qti.hardware.capabilityconfigstore@1.0-impl \
     vendor.qti.hardware.fm@1.0-impl \
-    vendor.qti.hardware.soter@1.0-impl \
     lib-imscmservice \
     lib-imsdpl \
     lib-imsqimf \
@@ -374,7 +372,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_client@1.1 \
     vendor.qti.hardware.radio.uim_remote_client@1.2 \
     vendor.qti.hardware.radio.uim_remote_server@1.0 \
-    vendor.qti.hardware.soter@1.0 \
     vendor.qti.ims.callcapability@1.0 \
     vendor.qti.ims.callinfo@1.0 \
     vendor.qti.ims.factory@1.0 \
@@ -431,7 +428,6 @@ PRODUCT_PACKAGES += \
     CACertService \
     CneApp \
     IWlanService \
-    SoterService \
     TimeService \
     PowerOffAlarm \
     QtiTelephonyService \
@@ -464,7 +460,6 @@ PRODUCT_PACKAGES += \
     qcrild \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
-    vendor.qti.hardware.soter@1.0-service \
     vendor.qti.media.c2@1.0-service \
     ims_rtp_daemon \
     imsdatadaemon \

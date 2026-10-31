@@ -6,6 +6,9 @@ soong_namespace {
     imports: [
         "device/xiaomi/sm6150-common",
         "hardware/xiaomi",
+        "vendor/qcom/opensource/commonsys-intf/display",
+        "vendor/qcom/opensource/dataservices",
+        "vendor/qcom/opensource/display",
     ],
 }
 

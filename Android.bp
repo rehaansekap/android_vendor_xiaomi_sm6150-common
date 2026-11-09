@@ -5,13 +5,11 @@
 soong_namespace {
     imports: [
         "device/xiaomi/sm6150-common",
-        "hardware/qcom-caf/sm8150",
-        "hardware/qcom-caf/wlan",
+        "hardware/qcom/sm8150/display",
         "hardware/xiaomi",
         "vendor/qcom/opensource/commonsys/display",
         "vendor/qcom/opensource/commonsys-intf/display",
         "vendor/qcom/opensource/dataservices",
-        "vendor/qcom/opensource/display",
     ],
 }
 
@@ -2340,7 +2338,6 @@ cc_prebuilt_library_shared {
                 "libwfdcommonutils_proprietary",
                 "libwfdutils_proprietary",
                 "libwfdconfigutils_proprietary",
-                "libwfdaac_vendor",
                 "libpng",
                 "libwfdmminterface_proprietary",
                 "libwfdcodecv4l2_proprietary",
@@ -4145,7 +4142,6 @@ cc_prebuilt_library_shared {
                 "vendor.qti.latency@2.1",
                 "vendor.qti.hardware.mwqemadapter@1.0",
                 "vendor.qti.data.mwqem@1.0",
-                "libwpa_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -5281,7 +5277,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "liblog",
-                "libjson",
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libqmi_encdec",
@@ -5793,7 +5788,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.radio@1.5",
                 "android.hardware.radio.deprecated@1.0",
                 "qtimutex",
-                "libprotobuf-cpp-full-3.9.1-vendorcompat",
+                "libprotobuf-cpp-full",
                 "libvndksupport",
                 "libbase",
                 "libz",
@@ -5914,18 +5909,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libsdedrm.so",
             ],
-            shared_libs: [
-                "libdrm",
-                "libdrmutils",
-                "libdisplaydebug",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -5941,22 +5928,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libsdm-color.so",
             ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbinder",
-                "libutils",
-                "libdisplaydebug",
-                "libtinyxml2_1",
-                "libsdmutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -5972,17 +5947,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libsdm-colormgr-algo.so",
             ],
-            shared_libs: [
-                "liblog",
-                "libdisplaydebug",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -5998,19 +5966,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libsdm-diag.so",
             ],
-            shared_libs: [
-                "libdiag",
-                "libsdmutils",
-                "libbinder",
-                "libdisplaydebug",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6026,21 +5985,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libsdm-disp-vndapis.so",
             ],
-            shared_libs: [
-                "libdisplaydebug",
-                "libqservice",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6056,19 +6004,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libsdmextension.so",
             ],
-            shared_libs: [
-                "libdisplaydebug",
-                "libsdmutils",
-                "libdisplayqos",
-                "libsdm-color",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6327,7 +6266,6 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.data.cne.internal.server@1.0",
                 "vendor.qti.hardware.data.cne.internal.api@1.0",
                 "vendor.qti.hardware.mwqemadapter@1.0",
-                "libwpa_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -6352,7 +6290,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libwvhidl.so",
             ],
             shared_libs: [
-                "libcrypto_shim",
                 "android.hardware.drm@1.0",
                 "android.hardware.drm@1.1",
                 "android.hardware.drm@1.2",
@@ -6363,7 +6300,7 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhidlmemory",
                 "liblog",
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+                "libprotobuf-cpp-lite",
                 "libutils",
                 "libc++",
                 "libc",
@@ -6444,11 +6381,10 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/mediadrm/libwvdrmengine.so",
             ],
             shared_libs: [
-                "libcrypto_shim",
                 "libbase",
                 "libcrypto",
                 "liblog",
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+                "libprotobuf-cpp-lite",
                 "libstagefright_foundation",
                 "libutils",
                 "libc++",
@@ -9468,7 +9404,7 @@ cc_prebuilt_library_shared {
                 "vendor.display.config@2.0",
                 "libdisplayconfig.system.qti",
                 "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V12-ndk",
+                "vendor.qti.hardware.display.config-V5-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -9589,9 +9525,8 @@ cc_prebuilt_library_shared {
                 "android.hardware.graphics.mapper@4.0",
                 "libvndksupport",
                 "android.hardware.graphics.allocator@4.0",
-                "android.hardware.graphics.allocator-V2-ndk",
+                "android.hardware.graphics.allocator-V1-ndk",
                 "libbinder_ndk",
-                "libaudiobase",
                 "libc++",
                 "libc",
                 "libm",
@@ -9700,10 +9635,9 @@ cc_prebuilt_library_shared {
                 "libwfdmminterface",
                 "libmedia_helper",
                 "libaudioclient",
-                "libaudiobase",
                 "libaudiofoundation",
                 "audioclient-types-aidl-cpp",
-                "android.media.audio.common.types-V5-cpp",
+                "android.media.audio.common.types-V1-cpp",
                 "libwfdmmsrc_system",
                 "libwfdavenhancements",
                 "libhidlbase",
@@ -10433,7 +10367,6 @@ cc_prebuilt_binary {
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libnl",
-                "libcld80211",
                 "libperipheral_client",
                 "libmdmdetect",
                 "libqmiservices",
@@ -10903,7 +10836,6 @@ cc_prebuilt_binary {
                 "libqmi_csi",
                 "libdsi_netctrl",
                 "libdiag",
-                "libwpa_client",
                 "libcneapiclient",
                 "libandroid_net",
                 "libutils",
@@ -11050,7 +10982,6 @@ cc_prebuilt_binary {
                 "libgps.utils",
                 "liblog",
                 "libnl",
-                "libwpa_client",
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libdiag",
@@ -11182,7 +11113,6 @@ cc_prebuilt_binary {
                 "libcutils",
                 "libutils",
                 "liblog",
-                "libjson",
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libqmi_encdec",
@@ -11699,67 +11629,4 @@ cc_prebuilt_binary {
     },
     prefer: true,
     system_ext_specific: true,
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
-    symlink_target: "/system_ext/lib64/libimscamera_jni.so",
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
-    symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
-}
-
-install_symlink {
-    name: "system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/WfdService/lib/arm64/libwfdnative.so",
-    symlink_target: "/system_ext/lib64/libwfdnative.so",
-}
-
-install_symlink {
-    name: "vendor_lib_libEGL_adreno_so",
-    soc_specific: true,
-    installed_location: "lib/libEGL_adreno.so",
-    symlink_target: "/vendor/lib/egl/libEGL_adreno.so",
-}
-
-install_symlink {
-    name: "vendor_lib_libGLESv2_adreno_so",
-    soc_specific: true,
-    installed_location: "lib/libGLESv2_adreno.so",
-    symlink_target: "/vendor/lib/egl/libGLESv2_adreno.so",
-}
-
-install_symlink {
-    name: "vendor_lib_libq3dtools_adreno_so",
-    soc_specific: true,
-    installed_location: "lib/libq3dtools_adreno.so",
-    symlink_target: "/vendor/lib/egl/libq3dtools_adreno.so",
-}
-
-install_symlink {
-    name: "vendor_lib64_libEGL_adreno_so",
-    soc_specific: true,
-    installed_location: "lib64/libEGL_adreno.so",
-    symlink_target: "/vendor/lib64/egl/libEGL_adreno.so",
-}
-
-install_symlink {
-    name: "vendor_lib64_libGLESv2_adreno_so",
-    soc_specific: true,
-    installed_location: "lib64/libGLESv2_adreno.so",
-    symlink_target: "/vendor/lib64/egl/libGLESv2_adreno.so",
-}
-
-install_symlink {
-    name: "vendor_lib64_libq3dtools_adreno_so",
-    soc_specific: true,
-    installed_location: "lib64/libq3dtools_adreno.so",
-    symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
 }
